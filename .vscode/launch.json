@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'toms_data_onion'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=toms_data_onion",
+                    "--package=toms_data_onion"
+                ],
+                "filter": {
+                    "name": "toms_data_onion",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'toms_data_onion'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=toms_data_onion",
+                    "--package=toms_data_onion"
+                ],
+                "filter": {
+                    "name": "toms_data_onion",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
